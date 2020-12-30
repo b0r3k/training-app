@@ -9,6 +9,11 @@ package model;
  *
  * @author borek
  */
-public class user {
+public abstract class User {
+    public String name;
+    String password;
+    public String email;
+    public int id;
     
+    // Add constructor here
 }

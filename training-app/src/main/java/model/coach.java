@@ -9,6 +9,20 @@ package model;
  *
  * @author borek
  */
-public class coach {
+public class Coach extends User {
+    public String expertise;
     
+    // Add constructor here
+    
+    public void AcceptAthlete(){
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+    
+    public void RemoveAthlete(){
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+    
+    public void CreateTrainig(){
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
 }

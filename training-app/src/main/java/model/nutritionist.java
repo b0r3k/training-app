@@ -9,6 +9,12 @@ package model;
  *
  * @author borek
  */
-public class nutritionist {
+public class Nutritionist extends User {
+    public String expertise;
     
+    // Add contructor here
+    
+    public void AcceptAthlete(){
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
 }
