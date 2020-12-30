@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package team.training.app;
+package model;
 
 /**
  *
  * @author borek
  */
-public class model {
+public class user {
     
 }
