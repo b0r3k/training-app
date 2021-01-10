@@ -1,0 +1,3 @@
+- figure out AvailabilityRequest.Accept() return type
+- correct AvailabilityRequest associations
+- correct if the Athlete should be connected to N/C, multiplicities, types (aggregation?)
