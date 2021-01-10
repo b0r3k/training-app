@@ -1,3 +1,13 @@
-- figure out AvailabilityRequest.Accept() return type
-- correct AvailabilityRequest associations
-- correct if the Athlete should be connected to N/C, multiplicities, types (aggregation?)
+- Figure out AvailabilityRequest.Accept() return type.
+- Figure out if the TrainingApp.View* should be static or not.
+- Add constraint that only only C/N that has Athlete in group / pending can Athlete.View().
+- Add constraint that only C/N that has Athlete in group can SportDay.Edit*().
+- Add constraint that ony C/N can AddFood()/AddExercise().
+- Revise the visibilities.
+
+Questions:
+- How should be the AvailabilityRequest associations? How to write there "creates a request"?
+- Should the athlete be connected to N/C, multiplicities, types (aggregation?)?
+- Should the groupAthletes be only at the association or also as an attribute in the class?
+	- Mark as Abstract in SportAdvisor if so.
+- Which classes should be connected to the <<control>>?
