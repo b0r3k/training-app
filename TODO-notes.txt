@@ -3,7 +3,13 @@
 - Add constraint that only only C/N that has Athlete in group / pending can Athlete.View().
 - Add constraint that only C/N that has Athlete in group can SportDay.Edit*().
 - Add constraint that ony C/N can AddFood()/AddExercise().
+	- View can only those and Athlete, to which it belongs.
+	- Only C/N can Edit() Exercise/Food and only his.
 - Revise the visibilities.
+- Revise the associations.
+#- Figure out if the Exercise and Food have method View().
+- Revise the return types of View(), for sure wrong, probably need to change visibilities.
+- Find out how to write actions.
 
 Questions:
 - How should be the AvailabilityRequest associations? How to write there "creates a request"?
@@ -11,3 +17,5 @@ Questions:
 - Should the groupAthletes be only at the association or also as an attribute in the class?
 	- Mark as Abstract in SportAdvisor if so.
 - Which classes should be connected to the <<control>>?
+- How to denote public getters??
+- Should Exercise -> Coach be Aggregation, or Composition? Same for F and N.
