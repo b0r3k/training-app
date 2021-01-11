@@ -7,13 +7,16 @@ package trainingapp;
 
 import model.*;
 import gui.*;
-
 /**
  *
  * @author borek
  */
 public class TrainingApp {
-    public static void main(String[] args){
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
         App app = new App();
         
         User u = new Athlete(40, 160, 23, 2, 1994, "Can't walk.");
@@ -23,4 +26,5 @@ public class TrainingApp {
         
         EntryForm gui = new EntryForm(app);
     }
+    
 }
