@@ -25,6 +25,7 @@ public class TrainingApp {
         app.AddUser(u);
         
         EntryForm gui = new EntryForm(app);
+        gui.setVisible(true);
     }
     
 }

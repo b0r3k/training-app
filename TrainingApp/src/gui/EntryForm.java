@@ -37,8 +37,7 @@ public class EntryForm extends javax.swing.JFrame {
         welcomeLabel = new javax.swing.JLabel();
         openUserButton = new javax.swing.JButton();
         addAthleteButton = new javax.swing.JButton();
-        addCoachButton = new javax.swing.JButton();
-        addNutritionistButton = new javax.swing.JButton();
+        addCoachOrNutrButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,48 +52,67 @@ public class EntryForm extends javax.swing.JFrame {
         });
 
         addAthleteButton.setText("Add Athlete");
+        addAthleteButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addAthleteButtonActionPerformed(evt);
+            }
+        });
 
-        addCoachButton.setText("Add Coach");
-
-        addNutritionistButton.setText("Add Nutritionist");
+        addCoachOrNutrButton.setText("Add Coach or Nutritionist");
+        addCoachOrNutrButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addCoachOrNutrButtonActionPerformed(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
+                .add(117, 117, 117)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(layout.createSequentialGroup()
-                        .add(117, 117, 117)
-                        .add(welcomeLabel))
-                    .add(openUserButton)
-                    .add(addAthleteButton)
-                    .add(addCoachButton)
-                    .add(addNutritionistButton))
-                .addContainerGap(126, Short.MAX_VALUE))
+                    .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                        .add(addCoachOrNutrButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .add(addAthleteButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .add(openUserButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 165, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(welcomeLabel))
+                .addContainerGap(118, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
-                .add(51, 51, 51)
+                .add(52, 52, 52)
                 .add(welcomeLabel)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 119, Short.MAX_VALUE)
+                .add(39, 39, 39)
                 .add(openUserButton)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(43, 43, 43)
                 .add(addAthleteButton)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(addCoachButton)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(addNutritionistButton)
-                .add(8, 8, 8))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(addCoachOrNutrButton)
+                .addContainerGap(73, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void openUserButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openUserButtonActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
+        OpenUserForm newGui = new OpenUserForm(this.model);
+        newGui.setVisible(true);
     }//GEN-LAST:event_openUserButtonActionPerformed
+
+    private void addAthleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addAthleteButtonActionPerformed
+        this.setVisible(false);
+        AddAthleteForm newGui = new AddAthleteForm(this.model);
+        newGui.setVisible(true);
+    }//GEN-LAST:event_addAthleteButtonActionPerformed
+
+    private void addCoachOrNutrButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addCoachOrNutrButtonActionPerformed
+        this.setVisible(false);
+        AddCoachOrNutrForm newGui = new AddCoachOrNutrForm(this.model);
+        newGui.setVisible(true);
+    }//GEN-LAST:event_addCoachOrNutrButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -133,8 +151,7 @@ public class EntryForm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addAthleteButton;
-    private javax.swing.JButton addCoachButton;
-    private javax.swing.JButton addNutritionistButton;
+    private javax.swing.JButton addCoachOrNutrButton;
     private javax.swing.JButton openUserButton;
     private javax.swing.JLabel welcomeLabel;
     // End of variables declaration//GEN-END:variables

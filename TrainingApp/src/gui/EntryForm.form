@@ -23,35 +23,32 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
-                      <Component id="welcomeLabel" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="addCoachOrNutrButton" max="32767" attributes="0"/>
+                      <Component id="addAthleteButton" max="32767" attributes="0"/>
+                      <Component id="openUserButton" min="-2" pref="165" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="openUserButton" min="-2" max="-2" attributes="0"/>
-                  <Component id="addAthleteButton" min="-2" max="-2" attributes="0"/>
-                  <Component id="addCoachButton" min="-2" max="-2" attributes="0"/>
-                  <Component id="addNutritionistButton" min="-2" max="-2" attributes="0"/>
+                  <Component id="welcomeLabel" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="126" max="32767" attributes="0"/>
+              <EmptySpace pref="118" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
               <Component id="welcomeLabel" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="119" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
               <Component id="openUserButton" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
               <Component id="addAthleteButton" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="addCoachButton" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="addNutritionistButton" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="addCoachOrNutrButton" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="73" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -75,16 +72,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Add Athlete"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addAthleteButtonActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="addCoachButton">
+    <Component class="javax.swing.JButton" name="addCoachOrNutrButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Add Coach"/>
+        <Property name="text" type="java.lang.String" value="Add Coach or Nutritionist"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="addNutritionistButton">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Add Nutritionist"/>
-      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addCoachOrNutrButtonActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
