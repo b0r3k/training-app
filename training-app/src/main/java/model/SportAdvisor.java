@@ -9,6 +9,6 @@ package model;
  *
  * @author borek
  */
-public class TimeExercise extends Exercise {
+public abstract class SportAdvisor {
     
 }

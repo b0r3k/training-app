@@ -5,6 +5,8 @@
  */
 package model;
 
+import java.time.LocalDate;
+import java.time.Month;
 import java.util.ArrayList;
 
 /**
@@ -12,30 +14,34 @@ import java.util.ArrayList;
  * @author borek
  */
 public class Athlete extends User {
-    public int weight;
-    public int height;
-    public int imc;
-    public String limitations;
+    private int weight;         // kilograms
+    private int height;         // centimetres
+    private int bmi;
+    private int age;            // now().getYear() - birthday.getYear()
+    private LocalDate birthday;
+    private String limitations;
     
-    //Add constructor here
-    
-    public ArrayList<Coach> SeeCoaches(){
-        throw new UnsupportedOperationException("Not supported yet.");
+    public Athlete(int w, int h, int bDay, int bMonth, int bYear, String l){
+        if (w < 30 || w > 220 || h < 120 || h > 230 || bYear < 1900 || bDay < 1 || bDay > 31 || bMonth < 1 || bMonth > 12){
+            // TODO EXCEPTION;
+        }
+        else{
+            this.weight = w;
+            this.height = h;
+            this.bmi = w / ((h/100)*(h/100));
+            this.birthday = LocalDate.of(bYear, bMonth, bDay);
+            this.age = LocalDate.now().getYear() - this.birthday.getYear();
+        }        
     }
     
-    public ArrayList<Nutritionist> SeeNutritionists(){
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-    
-    public void CoachAvailability(){
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-    
-    public void NutritionistAvailability(){
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-    
-    public void Modify(){
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void ModifyOwnData(int w, int h, String l){
+        if (w < 30 || w > 220 || h < 120 || h > 230){
+            // TODO EXCEPTION
+        }
+        else{
+            this.weight = w;
+            this.height = h;
+            this.limitations = l;
+        }
     }
 }

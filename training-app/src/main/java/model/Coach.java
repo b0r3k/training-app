@@ -9,8 +9,7 @@ package model;
  *
  * @author borek
  */
-public class Coach extends User {
-    public String expertise;
+public class Coach extends SportAdvisor {
     
     // Add constructor here
     

@@ -9,6 +9,6 @@ package model;
  *
  * @author borek
  */
-public class Diet {
+public class BasedOn {
     
 }

@@ -9,6 +9,6 @@ package model;
  *
  * @author borek
  */
-public abstract class Food {
+public class Food {
     
 }

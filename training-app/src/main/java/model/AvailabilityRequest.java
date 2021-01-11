@@ -9,6 +9,6 @@ package model;
  *
  * @author borek
  */
-public class SimpleFood extends Food {
+public class AvailabilityRequest {
     
 }
