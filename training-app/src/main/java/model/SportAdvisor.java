@@ -5,10 +5,18 @@
  */
 package model;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author borek
  */
 public abstract class SportAdvisor {
+    protected String expertise;
+    protected ArrayList<Athlete> groupAthletes;
+    protected ArrayList<AvailabilityRequest> pendingRequests;
     
+    protected void ModifyOwnData(String e){
+        this.expertise = e;
+    }
 }

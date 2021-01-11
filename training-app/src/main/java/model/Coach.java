@@ -5,13 +5,23 @@
  */
 package model;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author borek
  */
 public class Coach extends SportAdvisor {
     
-    // Add constructor here
+    public Coach(String e){
+        this.expertise = e;
+        this.groupAthletes = new ArrayList<>();
+        this.pendingRequests = new ArrayList<>();
+    }
+    
+    public void ModifyOwnData(String e){
+        this.expertise = e;
+    }
     
     public void AcceptAthlete(){
         throw new UnsupportedOperationException("Not supported yet.");

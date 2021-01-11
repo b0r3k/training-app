@@ -5,10 +5,13 @@
  */
 package model;
 
+import java.sql.Time;
+
 /**
  *
  * @author borek
  */
-public class BasedOn {
-    
+enum BasedOn {
+    TIME,
+    REPS
 }

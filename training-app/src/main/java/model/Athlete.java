@@ -20,6 +20,8 @@ public class Athlete extends User {
     private int age;            // now().getYear() - birthday.getYear()
     private LocalDate birthday;
     private String limitations;
+    private ArrayList<SportDay> sportPlan;
+    private ArrayList<SportDay> oldSportPlan;
     
     public Athlete(int w, int h, int bDay, int bMonth, int bYear, String l){
         if (w < 30 || w > 220 || h < 120 || h > 230 || bYear < 1900 || bDay < 1 || bDay > 31 || bMonth < 1 || bMonth > 12){
@@ -31,6 +33,8 @@ public class Athlete extends User {
             this.bmi = w / ((h/100)*(h/100));
             this.birthday = LocalDate.of(bYear, bMonth, bDay);
             this.age = LocalDate.now().getYear() - this.birthday.getYear();
+            this.sportPlan = new ArrayList<>();
+            this.oldSportPlan = new ArrayList<>();
         }        
     }
     
@@ -43,5 +47,13 @@ public class Athlete extends User {
             this.height = h;
             this.limitations = l;
         }
+    }
+    
+    public ArrayList<SportDay> ViewSportPlan(){
+        return this.sportPlan;
+    }
+    
+    public ArrayList<SportDay> ViewOldSportPlan(){
+        return this.oldSportPlan;
     }
 }

@@ -10,5 +10,13 @@ package model;
  * @author borek
  */
 public class AvailabilityRequest {
+    private Athlete athleteAsking;
     
+    public AvailabilityRequest(Athlete a){
+        this.athleteAsking = a;
+    }
+    
+    public Athlete View(){
+        return this.athleteAsking;
+    }
 }
