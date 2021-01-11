@@ -210,6 +210,7 @@ public class AddAthleteForm extends javax.swing.JFrame {
             
             Athlete athlete= new Athlete(name, password, email, weight, height, birthday, limitations);
             this.model.AddAthlete(athlete);
+            JOptionPane.showMessageDialog(this, "Athlete added successfuly!");
         }
         
         catch(NumberFormatException e) {
