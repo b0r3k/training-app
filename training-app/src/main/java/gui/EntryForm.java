@@ -6,15 +6,23 @@
 
 package gui;
 
+import model.*;
 /**
  *
  * @author borek
  */
 public class EntryForm extends javax.swing.JFrame {
 
+    private App model;
     /** Creates new form EntryForm */
     public EntryForm() {
         initComponents();
+    }
+    
+    public EntryForm(App m) {
+        initComponents();
+        
+        this.model = m;
     }
 
     /** This method is called from within the constructor to
@@ -26,32 +34,67 @@ public class EntryForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        welcomeLabel = new javax.swing.JLabel();
+        openUserButton = new javax.swing.JButton();
+        addAthleteButton = new javax.swing.JButton();
+        addCoachButton = new javax.swing.JButton();
+        addNutritionistButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Name:");
-        jLabel1.setName("nameLabel"); // NOI18N
+        welcomeLabel.setText("Welcome to our training app!");
+        welcomeLabel.setName("nameLabel"); // NOI18N
+
+        openUserButton.setText("Open User");
+        openUserButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                openUserButtonActionPerformed(evt);
+            }
+        });
+
+        addAthleteButton.setText("Add Athlete");
+
+        addCoachButton.setText("Add Coach");
+
+        addNutritionistButton.setText("Add Nutritionist");
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
-                .add(40, 40, 40)
-                .add(jLabel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 37, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(323, Short.MAX_VALUE))
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(layout.createSequentialGroup()
+                        .add(117, 117, 117)
+                        .add(welcomeLabel))
+                    .add(openUserButton)
+                    .add(addAthleteButton)
+                    .add(addCoachButton)
+                    .add(addNutritionistButton))
+                .addContainerGap(126, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
-                .add(44, 44, 44)
-                .add(jLabel1)
-                .addContainerGap(240, Short.MAX_VALUE))
+                .add(51, 51, 51)
+                .add(welcomeLabel)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 119, Short.MAX_VALUE)
+                .add(openUserButton)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(addAthleteButton)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(addCoachButton)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(addNutritionistButton)
+                .add(8, 8, 8))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void openUserButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openUserButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_openUserButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -89,7 +132,11 @@ public class EntryForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton addAthleteButton;
+    private javax.swing.JButton addCoachButton;
+    private javax.swing.JButton addNutritionistButton;
+    private javax.swing.JButton openUserButton;
+    private javax.swing.JLabel welcomeLabel;
     // End of variables declaration//GEN-END:variables
 
 }

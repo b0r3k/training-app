@@ -10,10 +10,8 @@ package model;
  * @author borek
  */
 public abstract class User {
-    public String name;
-    String password;
-    public String email;
-    public int id;
-    
-    // Add constructor here
+    protected String name;
+    protected String password;
+    protected String email;
+    protected int id;
 }

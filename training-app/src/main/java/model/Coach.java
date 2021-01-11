@@ -19,9 +19,7 @@ public class Coach extends SportAdvisor {
         this.pendingRequests = new ArrayList<>();
     }
     
-    public void ModifyOwnData(String e){
-        this.expertise = e;
-    }
+
     
     public void AcceptAthlete(){
         throw new UnsupportedOperationException("Not supported yet.");

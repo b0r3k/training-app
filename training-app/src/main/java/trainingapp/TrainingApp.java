@@ -5,33 +5,22 @@
  */
 package trainingapp;
 
-import java.util.ArrayList;
-import model.Coach;
-import model.Nutritionist;
+import model.*;
+import gui.*;
 
 /**
  *
  * @author borek
  */
 public class TrainingApp {
-    
-    private static ArrayList<Coach> allCoaches;
-    private static ArrayList<Nutritionist> allNutritionists;
-    
-    public static ArrayList<Coach> ViewCoaches(){
-        return allCoaches;
+    public static void main(String[] args){
+        App app = new App();
+        
+        User u = new Athlete(40, 160, 23, 2, 1994, "Can't walk.");
+        app.AddUser(u);
+        u = new Athlete(80, 180, 2, 2, 2002, "No.");
+        app.AddUser(u);
+        
+        EntryForm gui = new EntryForm(app);
     }
-    
-    public static ArrayList<Nutritionist> ViewNutritionists(){
-        return allNutritionists;
-    }
-    
-    public static void AddCoach(Coach c){
-        allCoaches.add(c);
-    }
-    
-    public static void AddNutritionist(Nutritionist n){
-        allNutritionists.add(n);
-    }
-
 }
