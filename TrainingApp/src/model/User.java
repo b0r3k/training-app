@@ -10,8 +10,25 @@ package model;
  * @author borek
  */
 public abstract class User {
-    protected String name;
-    protected String password;
-    protected String email;
-    protected int id;
+    private String name;
+    private String password;
+    private String email;
+    
+    public String getName(){
+        return this.name;
+    }
+    protected void setName(String name){
+        this.name = name;
+    }
+    
+    protected void setPassword(String password){
+        this.password = password;
+    }
+    
+    public String getEmail(){
+        return this.email;
+    }
+    protected void setEmail(String email){
+        this.email = email;
+    }
 }

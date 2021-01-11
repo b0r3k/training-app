@@ -7,6 +7,9 @@
 package gui;
 
 import model.*;
+import trainingapp.TrainingApp;
+import javax.swing.JOptionPane;
+import java.time.LocalDate;
 /**
  *
  * @author borek
@@ -35,37 +38,188 @@ public class AddAthleteForm extends javax.swing.JFrame {
     private void initComponents() {
 
         nameLabel = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        limitationsLabel = new javax.swing.JLabel();
+        homeButton = new javax.swing.JButton();
+        passwordLabel = new javax.swing.JLabel();
+        emailLabel = new javax.swing.JLabel();
+        weightLabel = new javax.swing.JLabel();
+        heightLabel = new javax.swing.JLabel();
+        birthdayLabel = new javax.swing.JLabel();
+        emailTextField = new javax.swing.JTextField();
+        limitationsTextField = new javax.swing.JTextField();
+        weightTextField = new javax.swing.JTextField();
+        heightTextField = new javax.swing.JTextField();
+        passwordPasswordField = new javax.swing.JPasswordField();
+        birthdayTextField = new javax.swing.JTextField();
+        nameTextField = new javax.swing.JTextField();
+        addAthleteButton = new javax.swing.JButton();
+        kgLabel = new javax.swing.JLabel();
+        cmLabel = new javax.swing.JLabel();
+        yearLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         nameLabel.setText("Name:");
 
-        jLabel1.setText("Limitations:");
+        limitationsLabel.setText("Limitations:");
+
+        homeButton.setText("Home");
+        homeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                homeButtonActionPerformed(evt);
+            }
+        });
+
+        passwordLabel.setText("Password:");
+
+        emailLabel.setText("Email:");
+
+        weightLabel.setText("Weight:");
+
+        heightLabel.setText("Height:");
+
+        birthdayLabel.setText("Birthday:");
+
+        addAthleteButton.setText("Add Athlete!");
+        addAthleteButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addAthleteButtonActionPerformed(evt);
+            }
+        });
+
+        kgLabel.setText("kg");
+
+        cmLabel.setText("cm");
+
+        yearLabel.setText("year");
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
-                .add(37, 37, 37)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(jLabel1)
-                    .add(nameLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 37, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(302, Short.MAX_VALUE))
+                    .add(limitationsLabel)
+                    .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                        .add(layout.createSequentialGroup()
+                            .add(61, 61, 61)
+                            .add(nameLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 37, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .add(layout.createSequentialGroup()
+                            .addContainerGap()
+                            .add(homeButton)))
+                    .add(passwordLabel)
+                    .add(emailLabel)
+                    .add(weightLabel)
+                    .add(heightLabel)
+                    .add(birthdayLabel))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(addAthleteButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                    .add(weightTextField)
+                    .add(heightTextField)
+                    .add(limitationsTextField)
+                    .add(birthdayTextField)
+                    .add(nameTextField)
+                    .add(passwordPasswordField)
+                    .add(emailTextField))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(kgLabel)
+                    .add(cmLabel)
+                    .add(yearLabel))
+                .add(118, 118, 118))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
-                .add(43, 43, 43)
-                .add(nameLabel)
+                .addContainerGap()
+                .add(homeButton)
+                .add(12, 12, 12)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(nameLabel)
+                    .add(nameTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(passwordLabel)
+                    .add(passwordPasswordField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(emailLabel)
+                    .add(emailTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jLabel1)
-                .addContainerGap(213, Short.MAX_VALUE))
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(weightLabel)
+                    .add(weightTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(kgLabel))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(heightLabel)
+                    .add(heightTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(cmLabel))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(birthdayLabel)
+                    .add(birthdayTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(yearLabel))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(limitationsLabel)
+                    .add(limitationsTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(18, 18, 18)
+                .add(addAthleteButton)
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void homeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeButtonActionPerformed
+        this.setVisible(false);
+        TrainingApp.GoHome(this.model);
+    }//GEN-LAST:event_homeButtonActionPerformed
+
+    private void addAthleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addAthleteButtonActionPerformed
+        try {
+            String name = nameTextField.getText().toString();
+            if (model.NameExists(name)){
+                throw new IllegalArgumentException("This name is already taken!");
+            }
+            String password = passwordPasswordField.getPassword().toString();
+            String email = emailTextField.getText().toString();
+            if (model.EmailExists(email)){
+                throw new IllegalArgumentException("This email is already used!");
+            }
+            if(name.equals("") || password.equals("") || email.equals("")){
+                throw new IllegalArgumentException("All fields except Limitations must be nonempty!");
+            }
+            
+            int weight = Integer.parseInt(weightTextField.getText());
+            if (weight <= 30 || weight >= 220){
+                throw new IllegalArgumentException("Weight must be bigger than 20 and smaller than 220!");
+            }
+            int height = Integer.parseInt(heightTextField.getText());
+            if (height <= 120 || height >= 230){
+                throw new IllegalArgumentException("Height must be bigger than 120 and smaller than 230!");
+            }
+            int birthday = Integer.parseInt(birthdayTextField.getText());
+            if (birthday < 1900  || birthday > LocalDate.now().getYear()){
+                throw new IllegalArgumentException("Birthday must be after 1900 and before this year!");
+            }
+            
+            String limitations = limitationsTextField.getText().toString();
+            
+            Athlete athlete= new Athlete(name, password, email, weight, height, birthday, limitations);
+            this.model.AddAthlete(athlete);
+        }
+        
+        catch(NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Weight, height and birthday must be integer numbers!");
+        }
+        catch(IllegalArgumentException e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
+        
+    }//GEN-LAST:event_addAthleteButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -103,8 +257,25 @@ public class AddAthleteForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton addAthleteButton;
+    private javax.swing.JLabel birthdayLabel;
+    private javax.swing.JTextField birthdayTextField;
+    private javax.swing.JLabel cmLabel;
+    private javax.swing.JLabel emailLabel;
+    private javax.swing.JTextField emailTextField;
+    private javax.swing.JLabel heightLabel;
+    private javax.swing.JTextField heightTextField;
+    private javax.swing.JButton homeButton;
+    private javax.swing.JLabel kgLabel;
+    private javax.swing.JLabel limitationsLabel;
+    private javax.swing.JTextField limitationsTextField;
     private javax.swing.JLabel nameLabel;
+    private javax.swing.JTextField nameTextField;
+    private javax.swing.JLabel passwordLabel;
+    private javax.swing.JPasswordField passwordPasswordField;
+    private javax.swing.JLabel weightLabel;
+    private javax.swing.JTextField weightTextField;
+    private javax.swing.JLabel yearLabel;
     // End of variables declaration//GEN-END:variables
 
 }

@@ -40,7 +40,15 @@ public class App {
         this.allNutritionists.add(n);
     }
     
-    public void AddUser(User u){
-        this.allUsers.add(u);
+    public void AddAthlete(Athlete a){
+        this.allUsers.add(a);
+    }
+    
+    public Boolean NameExists(String name){
+        return allUsers.stream().anyMatch(u -> u.getName().equals(name));
+    }
+    
+    public Boolean EmailExists(String email){
+        return allUsers.stream().anyMatch(u -> u.getEmail().equals(email));
     }
 }

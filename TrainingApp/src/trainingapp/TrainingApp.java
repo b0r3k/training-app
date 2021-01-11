@@ -19,12 +19,17 @@ public class TrainingApp {
     public static void main(String[] args) {
         App app = new App();
         
-        User u = new Athlete(40, 160, 23, 2, 1994, "Can't walk.");
-        app.AddUser(u);
-        u = new Athlete(80, 180, 2, 2, 2002, "No.");
-        app.AddUser(u);
+        Athlete a = new Athlete("Emil", "pass", "emil@emil.cz", 40, 160, 1994, "Can't walk.");
+        app.AddAthlete(a);
+        a = new Athlete("Karel", "pass", "karel@karel.cz", 80, 180, 2002, "No.");
+        app.AddAthlete(a);
         
         EntryForm gui = new EntryForm(app);
+        gui.setVisible(true);
+    }
+    
+    public static void GoHome(App m){
+        EntryForm gui = new EntryForm(m);
         gui.setVisible(true);
     }
     
