@@ -8,6 +8,7 @@ package gui;
 
 import model.*;
 import trainingapp.TrainingApp;
+import javax.swing.JOptionPane;
 /**
  *
  * @author borek
@@ -24,6 +25,7 @@ public class OpenUserForm extends javax.swing.JFrame {
         initComponents();
         
         this.model = m;
+        this.usersList.setListData(this.model.ViewUsersNames());
     }
     
     /** This method is called from within the constructor to
@@ -37,9 +39,10 @@ public class OpenUserForm extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
         homeButton = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        usersList = new javax.swing.JList<>();
+        openButton = new javax.swing.JButton();
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -47,14 +50,20 @@ public class OpenUserForm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane2.setViewportView(jTextArea2);
-
         homeButton.setText("Home");
         homeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 homeButtonActionPerformed(evt);
+            }
+        });
+
+        usersList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jScrollPane2.setViewportView(usersList);
+
+        openButton.setText("Open");
+        openButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                openButtonActionPerformed(evt);
             }
         });
 
@@ -65,21 +74,28 @@ public class OpenUserForm extends javax.swing.JFrame {
             .add(layout.createSequentialGroup()
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(layout.createSequentialGroup()
-                        .add(85, 85, 85)
-                        .add(jScrollPane2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(layout.createSequentialGroup()
                         .addContainerGap()
-                        .add(homeButton)))
-                .addContainerGap(101, Short.MAX_VALUE))
+                        .add(homeButton))
+                    .add(layout.createSequentialGroup()
+                        .add(48, 48, 48)
+                        .add(jScrollPane2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 127, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(18, 18, 18)
+                        .add(openButton)))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
                 .addContainerGap()
                 .add(homeButton)
-                .add(42, 42, 42)
-                .add(jScrollPane2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(144, Short.MAX_VALUE))
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(layout.createSequentialGroup()
+                        .add(18, 18, 18)
+                        .add(jScrollPane2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 208, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(layout.createSequentialGroup()
+                        .add(110, 110, 110)
+                        .add(openButton)))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
         pack();
@@ -89,6 +105,16 @@ public class OpenUserForm extends javax.swing.JFrame {
         this.setVisible(false);
         TrainingApp.GoHome(this.model);
     }//GEN-LAST:event_homeButtonActionPerformed
+
+    private void openButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openButtonActionPerformed
+        if(this.usersList.isSelectionEmpty()){
+            JOptionPane.showMessageDialog(this, "Select a user!");
+        }
+        else{
+            int userIndex = this.usersList.getSelectedIndex();
+            JOptionPane.showMessageDialog(this, userIndex);
+        }
+    }//GEN-LAST:event_openButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -130,7 +156,8 @@ public class OpenUserForm extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JButton openButton;
+    private javax.swing.JList<String> usersList;
     // End of variables declaration//GEN-END:variables
 
 }

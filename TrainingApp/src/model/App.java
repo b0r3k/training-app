@@ -20,8 +20,8 @@ public class App {
 
     public App(){
         this.allUsers = new ArrayList<>();
-        allCoaches = new ArrayList<>();
-        allNutritionists = new ArrayList<>();
+        this.allCoaches = new ArrayList<>();
+        this.allNutritionists = new ArrayList<>();
     }
     
     public ArrayList<Coach> ViewCoaches(){
@@ -30,6 +30,16 @@ public class App {
     
     public ArrayList<Nutritionist> ViewNutritionists(){
         return this.allNutritionists;
+    }
+    
+    //public ArrayList<User> ViewUsers(){
+    public String[] ViewUsersNames(){
+        int numberUsers = this.allUsers.size();
+        String[] usersNames = new String[numberUsers];
+        for (int i=0; i<numberUsers; i++){
+            usersNames[i] = this.allUsers.get(i).getName();
+        }
+        return usersNames;
     }
     
     public void AddCoach(Coach c){

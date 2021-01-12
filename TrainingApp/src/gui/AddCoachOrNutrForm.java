@@ -131,7 +131,7 @@ public class AddCoachOrNutrForm extends javax.swing.JFrame {
                     .add(expertiseLabel)
                     .add(expertiseTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .add(18, 18, 18)
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(coachRadioButton)
                     .add(nutritionistRadioButton))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
