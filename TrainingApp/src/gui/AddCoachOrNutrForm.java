@@ -168,10 +168,13 @@ public class AddCoachOrNutrForm extends javax.swing.JFrame {
                 this.model.AddCoach(coach);
                 JOptionPane.showMessageDialog(this, "Coach added successfully!");
             }
+            else if(nutritionistRadioButton.isSelected()){
+                    Nutritionist nutritionist  = new Nutritionist(name, password, email, expertise);
+                    this.model.AddNutritionist(nutritionist);
+                    JOptionPane.showMessageDialog(this, "Nutritionist added successfully!");
+            }
             else{
-                Nutritionist nutritionist  = new Nutritionist(name, password, email, expertise);
-                this.model.AddNutritionist(nutritionist);
-                JOptionPane.showMessageDialog(this, "Nutritionist added successfully!");
+                    JOptionPane.showMessageDialog(this, "Choose Coach or Nutritionist!");
             }
         }
         

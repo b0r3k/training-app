@@ -6,15 +6,25 @@
 
 package gui;
 
+import model.*;
 /**
  *
  * @author borek
  */
 public class CoachViewForm extends javax.swing.JFrame {
 
+    private App model;
+    private Coach coach;
     /** Creates new form CoachViewForm */
     public CoachViewForm() {
         initComponents();
+    }
+    
+    public CoachViewForm(App m, Coach c) {
+        initComponents();
+        
+        this.model = m;
+        this.coach = c;
     }
 
     /** This method is called from within the constructor to

@@ -6,15 +6,25 @@
 
 package gui;
 
+import model.*;
 /**
  *
  * @author borek
  */
 public class NutritionistViewForm extends javax.swing.JFrame {
 
+    private App model;
+    private Nutritionist nutritionist;
     /** Creates new form NutritionistViewForm */
     public NutritionistViewForm() {
         initComponents();
+    }
+    
+    public NutritionistViewForm(App m, Nutritionist n) {
+        initComponents();
+        
+        this.model = m;
+        this.nutritionist = n;
     }
 
     /** This method is called from within the constructor to

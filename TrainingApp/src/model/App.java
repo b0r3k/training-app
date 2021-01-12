@@ -24,12 +24,16 @@ public class App {
         this.allNutritionists = new ArrayList<>();
     }
     
-    public ArrayList<Coach> ViewCoaches(){
+    public ArrayList<Coach> getAllCoaches(){
         return this.allCoaches;
     }
     
-    public ArrayList<Nutritionist> ViewNutritionists(){
+    public ArrayList<Nutritionist> getAllNutritionists(){
         return this.allNutritionists;
+    }
+    
+    public ArrayList<User> getAllUsers(){
+        return this.allUsers;
     }
     
     //public ArrayList<User> ViewUsers(){

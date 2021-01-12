@@ -112,7 +112,25 @@ public class OpenUserForm extends javax.swing.JFrame {
         }
         else{
             int userIndex = this.usersList.getSelectedIndex();
-            JOptionPane.showMessageDialog(this, userIndex);
+            User selectedUser = this.model.getAllUsers().get(userIndex);
+            
+            var newGui = new javax.swing.JFrame();
+            if(selectedUser instanceof Athlete){
+                newGui = new AthleteViewForm(this.model, (Athlete)selectedUser);
+            }
+            else if (selectedUser instanceof Coach){
+                newGui = new CoachViewForm(this.model, (Coach)selectedUser);
+            }
+            else if (selectedUser instanceof Nutritionist){
+                newGui = new NutritionistViewForm(this.model, (Nutritionist)selectedUser);
+            }
+            else{
+                newGui = this;
+                JOptionPane.showMessageDialog(this, "Unknown error, this should not happen.");
+            }
+            
+            newGui.setVisible(true);
+            this.setVisible(false);
         }
     }//GEN-LAST:event_openButtonActionPerformed
 
