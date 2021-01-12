@@ -57,6 +57,11 @@ public class AthleteViewForm extends javax.swing.JFrame {
         });
 
         modifyDataButton.setText("Modify My Data");
+        modifyDataButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modifyDataButtonActionPerformed(evt);
+            }
+        });
 
         findCoachButton.setText("Find Coach");
         findCoachButton.addActionListener(new java.awt.event.ActionListener() {
@@ -145,6 +150,11 @@ public class AthleteViewForm extends javax.swing.JFrame {
         var newGui = new FindingCoachForm(this.model, this.athlete);
         newGui.setVisible(true);
     }//GEN-LAST:event_findCoachButtonActionPerformed
+
+    private void modifyDataButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modifyDataButtonActionPerformed
+        var newGui = new ModifyAthleteForm(this.model, this.athlete);
+        newGui.setVisible(true);
+    }//GEN-LAST:event_modifyDataButtonActionPerformed
 
     /**
      * @param args the command line arguments

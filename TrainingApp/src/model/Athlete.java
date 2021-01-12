@@ -35,9 +35,20 @@ public class Athlete extends User {
             this.bmi = w / ((h/100)*(h/100));
             this.birthday = bYear;
             this.age = LocalDate.now().getYear() - birthday;
+            this.limitations = l;
             this.sportPlan = new ArrayList<>();
             this.oldSportPlan = new ArrayList<>();
         }        
+    }
+    
+    public int getWeight(){
+        return this.weight;
+    }
+    public int getHeight(){
+        return this.height;
+    }
+    public String getLimitations(){
+        return this.limitations;
     }
     
     public void ModifyOwnData(int w, int h, String l){
