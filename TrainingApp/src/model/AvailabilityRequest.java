@@ -12,6 +12,10 @@ package model;
 public class AvailabilityRequest {
     private Athlete athleteAsking;
     
+    public Athlete getAthleteAsking(){
+        return this.athleteAsking;
+    }
+    
     public AvailabilityRequest(Athlete a){
         this.athleteAsking = a;
     }

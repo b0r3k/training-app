@@ -23,6 +23,10 @@ public class TrainingApp {
         app.AddAthlete(a);
         a = new Athlete("Karel", "pass", "karel@karel.cz", 80, 180, 2002, "No.");
         app.AddAthlete(a);
+        Coach c = new Coach("Pepa", "pass", "pepa@pepa.cz", "Swimming.");
+        app.AddCoach(c);
+        Nutritionist n = new Nutritionist("Venca", "pass", "venca@venca.cz", "Cycling.");
+        app.AddNutritionist(n);
         
         EntryForm gui = new EntryForm(app);
         gui.setVisible(true);

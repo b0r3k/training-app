@@ -21,8 +21,7 @@ public class Coach extends SportAdvisor {
         this.groupAthletes = new ArrayList<>();
         this.pendingRequests = new ArrayList<>();
     }
-    
-
+   
     
     public void AcceptAthlete(){
         throw new UnsupportedOperationException("Not supported yet.");

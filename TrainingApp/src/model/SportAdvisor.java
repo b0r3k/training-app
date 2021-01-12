@@ -23,7 +23,18 @@ public abstract class SportAdvisor extends User {
         return this.expertise;
     }
     
+    public ArrayList<AvailabilityRequest> getPendingRequests(){
+        return this.pendingRequests;
+    }
+    
     protected void ModifyOwnData(String e){
         this.setExpertise(e);
+    }
+    
+    public void AddPendingRequest(AvailabilityRequest ar){
+        this.pendingRequests.add(ar);
+    }
+    public Boolean RequestExists(Athlete athleteAsking){
+        return pendingRequests.stream().anyMatch(ar -> ar.getAthleteAsking().equals(athleteAsking));
     }
 }

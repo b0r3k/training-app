@@ -46,6 +46,30 @@ public class App {
         return usersNames;
     }
     
+    public String[] ViewCoachesNamesExpertise(){
+        int numberCoaches = this.allCoaches.size();
+        String[] coachesNamesExpertise = new String[numberCoaches];
+        for (int i=0; i<numberCoaches; i++){
+            Coach coach = this.allCoaches.get(i);
+            String name = coach.getName();
+            String expertise = coach.getExpertise();
+            coachesNamesExpertise[i] = name + ": " + expertise;
+        }
+        return coachesNamesExpertise;
+    }
+    
+    public String[] ViewNutrsNamesExpertise(){
+        int numberNutrs = this.allNutritionists.size();
+        String[] nutrsNamesExpertise = new String[numberNutrs];
+        for (int i=0; i<numberNutrs; i++){
+            Nutritionist nutr = this.allNutritionists.get(i);
+            String name = nutr.getName();
+            String expertise = nutr.getExpertise();
+            nutrsNamesExpertise[i] = name + ": " + expertise;
+        }
+        return nutrsNamesExpertise;
+    }
+    
     public void AddCoach(Coach c){
         this.allCoaches.add(c);
         this.allUsers.add(c);
