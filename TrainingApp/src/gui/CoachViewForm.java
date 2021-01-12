@@ -38,6 +38,7 @@ public class CoachViewForm extends javax.swing.JFrame {
     private void initComponents() {
 
         homeButton = new javax.swing.JButton();
+        viewPendingButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -48,21 +49,35 @@ public class CoachViewForm extends javax.swing.JFrame {
             }
         });
 
+        viewPendingButton.setText("View Pending Requests");
+        viewPendingButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewPendingButtonActionPerformed(evt);
+            }
+        });
+
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
-                .addContainerGap()
-                .add(homeButton)
-                .addContainerGap(322, Short.MAX_VALUE))
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .add(homeButton))
+                    .add(layout.createSequentialGroup()
+                        .add(82, 82, 82)
+                        .add(viewPendingButton)))
+                .addContainerGap(166, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
                 .addContainerGap()
                 .add(homeButton)
-                .addContainerGap(272, Short.MAX_VALUE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 193, Short.MAX_VALUE)
+                .add(viewPendingButton)
+                .add(57, 57, 57))
         );
 
         pack();
@@ -72,6 +87,11 @@ public class CoachViewForm extends javax.swing.JFrame {
         this.setVisible(false);
         TrainingApp.GoHome(this.model);
     }//GEN-LAST:event_homeButtonActionPerformed
+
+    private void viewPendingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewPendingButtonActionPerformed
+        var newGui = new PendingRequestsForm(this.model, this.coach);
+        newGui.setVisible(true);
+    }//GEN-LAST:event_viewPendingButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -110,6 +130,7 @@ public class CoachViewForm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton homeButton;
+    private javax.swing.JButton viewPendingButton;
     // End of variables declaration//GEN-END:variables
 
 }

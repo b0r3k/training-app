@@ -20,7 +20,14 @@ public class AvailabilityRequest {
         this.athleteAsking = a;
     }
     
-    public Athlete View(){
-        return this.athleteAsking;
+    public String ViewAthlete(){
+        Athlete athlete = this.athleteAsking;
+        String name = athlete.getName();
+        String weight = Integer.toString(athlete.getWeight());
+        String height = Integer.toString(athlete.getHeight());
+        String bmi = Integer.toString(athlete.getBmi());
+        String age = Integer.toString(athlete.getAge());
+        String limitations = athlete.getLimitations();
+        return (name+", "+weight+" kg, "+height+" cm, BMI: "+bmi+", "+age+" yrs, Limitations:"+limitations);
     }
 }

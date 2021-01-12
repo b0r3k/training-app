@@ -37,4 +37,21 @@ public abstract class SportAdvisor extends User {
     public Boolean RequestExists(Athlete athleteAsking){
         return pendingRequests.stream().anyMatch(ar -> ar.getAthleteAsking().equals(athleteAsking));
     }
+    public String[] ViewRequestsAthletesInfos(){
+        int numberRequests = this.pendingRequests.size();
+        String[] athletesInfos = new String[numberRequests];
+        for (int i=0; i<numberRequests; i++){
+            athletesInfos[i] = this.pendingRequests.get(i).ViewAthlete();
+        }
+        return athletesInfos;
+    }
+    public void RemoveRequestFromIndex(int index){
+        if (0 <= index && index < this.pendingRequests.size()){
+            this.pendingRequests.remove(index);
+        }
+    }
+    
+    public void AddAthleteToGroup(Athlete athlete){
+        this.groupAthletes.add(athlete);
+    }
 }

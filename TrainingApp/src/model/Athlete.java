@@ -47,6 +47,12 @@ public class Athlete extends User {
     public int getHeight(){
         return this.height;
     }
+    public int getBmi(){
+        return this.bmi;
+    }
+    public int getAge(){
+        return this.age;
+    }
     public String getLimitations(){
         return this.limitations;
     }
