@@ -208,9 +208,9 @@ public class AddAthleteForm extends javax.swing.JFrame {
             
             String limitations = limitationsTextField.getText().toString();
             
-            Athlete athlete= new Athlete(name, password, email, weight, height, birthday, limitations);
+            Athlete athlete = new Athlete(name, password, email, weight, height, birthday, limitations);
             this.model.AddAthlete(athlete);
-            JOptionPane.showMessageDialog(this, "Athlete added successfuly!");
+            JOptionPane.showMessageDialog(this, "Athlete added successfully!");
         }
         
         catch(NumberFormatException e) {

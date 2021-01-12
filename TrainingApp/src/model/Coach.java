@@ -13,8 +13,11 @@ import java.util.ArrayList;
  */
 public class Coach extends SportAdvisor {
     
-    public Coach(String e){
-        this.expertise = e;
+    public Coach(String name, String password, String email, String expertise){
+        this.setName(name);
+        this.setPassword(password);
+        this.setEmail(email);
+        this.setExpertise(expertise);
         this.groupAthletes = new ArrayList<>();
         this.pendingRequests = new ArrayList<>();
     }

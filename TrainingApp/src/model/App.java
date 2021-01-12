@@ -34,10 +34,12 @@ public class App {
     
     public void AddCoach(Coach c){
         this.allCoaches.add(c);
+        this.allUsers.add(c);
     }
     
     public void AddNutritionist(Nutritionist n){
         this.allNutritionists.add(n);
+        this.allUsers.add(n);
     }
     
     public void AddAthlete(Athlete a){

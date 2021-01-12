@@ -11,12 +11,19 @@ import java.util.ArrayList;
  *
  * @author borek
  */
-public abstract class SportAdvisor {
-    protected String expertise;
+public abstract class SportAdvisor extends User {
+    private String expertise;
     protected ArrayList<Athlete> groupAthletes;
     protected ArrayList<AvailabilityRequest> pendingRequests;
     
+    protected void setExpertise(String expertise){
+        this.expertise = expertise;
+    }
+    public String getExpertise(){
+        return this.expertise;
+    }
+    
     protected void ModifyOwnData(String e){
-        this.expertise = e;
+        this.setExpertise(e);
     }
 }
