@@ -120,7 +120,7 @@ public class CoachViewForm extends javax.swing.JFrame {
     }//GEN-LAST:event_modifyDataButtonActionPerformed
 
     private void mAthletesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mAthletesButtonActionPerformed
-        var newGui = new CoachAthletesForm(this.model, this.coach);
+        var newGui = new GroupAthletesForm(this.model, this.coach);
         newGui.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_mAthletesButtonActionPerformed

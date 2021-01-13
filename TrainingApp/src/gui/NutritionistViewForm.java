@@ -82,25 +82,25 @@ public class NutritionistViewForm extends javax.swing.JFrame {
                         .addContainerGap()
                         .add(homeButton))
                     .add(layout.createSequentialGroup()
-                        .add(86, 86, 86)
-                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                            .add(mAthletesButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .add(viewPendingButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .add(modifyDataButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(162, Short.MAX_VALUE))
+                        .add(64, 64, 64)
+                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                            .add(modifyDataButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 152, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(mAthletesButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 152, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(viewPendingButton))))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
                 .addContainerGap()
                 .add(homeButton)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 70, Short.MAX_VALUE)
+                .add(41, 41, 41)
                 .add(mAthletesButton)
                 .add(18, 18, 18)
                 .add(modifyDataButton)
                 .add(18, 18, 18)
                 .add(viewPendingButton)
-                .add(100, 100, 100))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         pack();
@@ -122,7 +122,7 @@ public class NutritionistViewForm extends javax.swing.JFrame {
     }//GEN-LAST:event_modifyDataButtonActionPerformed
 
     private void mAthletesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mAthletesButtonActionPerformed
-        var newGui = new NutrAthletesForm(this.model, this.nutritionist);
+        var newGui = new GroupAthletesForm(this.model, this.nutritionist);
         newGui.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_mAthletesButtonActionPerformed
