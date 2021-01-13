@@ -5,10 +5,16 @@
  */
 package model;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 /**
  *
  * @author borek
  */
 public class SportDay {
+    private LocalDate date;
+    private ArrayList<Exercise> training;
+    private ArrayList<Food> foods;
     
+    // TODO constructor
 }

@@ -42,10 +42,8 @@ public class AthleteViewForm extends javax.swing.JFrame {
         modifyDataButton = new javax.swing.JButton();
         findCoachButton = new javax.swing.JButton();
         findNutritionistButton = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        viewPlanButton = new javax.swing.JButton();
+        viewOldPlanButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -77,13 +75,9 @@ public class AthleteViewForm extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText("View Training Plan");
+        viewPlanButton.setText("View Sports Plan");
 
-        jButton1.setText("View Old Training Plan");
-
-        jButton2.setText("Vieiw Diet");
-
-        jButton4.setText("View Old Diet");
+        viewOldPlanButton.setText("View Old Sports Plan");
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -95,36 +89,25 @@ public class AthleteViewForm extends javax.swing.JFrame {
                         .addContainerGap()
                         .add(homeButton))
                     .add(layout.createSequentialGroup()
-                        .add(48, 48, 48)
-                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                            .add(jButton3, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                            .add(jButton2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .add(18, 18, 18)
-                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                            .add(jButton1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .add(jButton4, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .add(layout.createSequentialGroup()
                         .add(116, 116, 116)
                         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                             .add(modifyDataButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
                             .add(findCoachButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .add(findNutritionistButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(34, Short.MAX_VALUE))
+                            .add(findNutritionistButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .add(viewOldPlanButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .add(viewPlanButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(104, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
                 .addContainerGap()
                 .add(homeButton)
+                .add(17, 17, 17)
+                .add(viewPlanButton)
                 .add(18, 18, 18)
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jButton1)
-                    .add(jButton3))
-                .add(18, 18, 18)
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jButton2)
-                    .add(jButton4))
-                .add(44, 44, 44)
+                .add(viewOldPlanButton)
+                .add(45, 45, 45)
                 .add(modifyDataButton)
                 .add(18, 18, 18)
                 .add(findCoachButton)
@@ -205,11 +188,9 @@ public class AthleteViewForm extends javax.swing.JFrame {
     private javax.swing.JButton findCoachButton;
     private javax.swing.JButton findNutritionistButton;
     private javax.swing.JButton homeButton;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton modifyDataButton;
+    private javax.swing.JButton viewOldPlanButton;
+    private javax.swing.JButton viewPlanButton;
     // End of variables declaration//GEN-END:variables
 
 }
