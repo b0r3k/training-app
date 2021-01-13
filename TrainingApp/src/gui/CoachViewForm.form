@@ -34,6 +34,7 @@
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="viewPendingButton" max="32767" attributes="0"/>
                           <Component id="modifyDataButton" max="32767" attributes="0"/>
+                          <Component id="mAthletesButton" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -46,7 +47,9 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="homeButton" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="153" max="32767" attributes="0"/>
+              <EmptySpace pref="113" max="32767" attributes="0"/>
+              <Component id="mAthletesButton" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="modifyDataButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="viewPendingButton" min="-2" max="-2" attributes="0"/>
@@ -78,6 +81,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="modifyDataButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="mAthletesButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="My Athletes"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mAthletesButtonActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

@@ -11,7 +11,15 @@ import java.sql.Time;
  *
  * @author borek
  */
-enum BasedOn {
-    TIME,
-    REPS
+public enum BasedOn {
+    TIME{
+        public String toString(){
+            return "seconds";
+        }
+    },
+    REPS{
+        public String toString(){
+            return "reps";
+        }
+    }
 }

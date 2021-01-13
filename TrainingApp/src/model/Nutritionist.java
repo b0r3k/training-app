@@ -12,6 +12,7 @@ import java.util.ArrayList;
  * @author borek
  */
 public class Nutritionist extends SportAdvisor {
+    private ArrayList<Food> myFoods;
     
     public Nutritionist(String name, String password, String email, String expertise){
         this.setName(name);
@@ -20,9 +21,10 @@ public class Nutritionist extends SportAdvisor {
         this.setExpertise(expertise);
         this.groupAthletes = new ArrayList<>();
         this.pendingRequests = new ArrayList<>();
+        this.myFoods = new ArrayList<>();
     }
     
-    public void AcceptAthlete(){
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void AddFoodToMyFoods(Food food){
+        this.myFoods.add(food);
     }
 }

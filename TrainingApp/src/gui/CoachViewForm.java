@@ -40,6 +40,7 @@ public class CoachViewForm extends javax.swing.JFrame {
         homeButton = new javax.swing.JButton();
         viewPendingButton = new javax.swing.JButton();
         modifyDataButton = new javax.swing.JButton();
+        mAthletesButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -64,6 +65,13 @@ public class CoachViewForm extends javax.swing.JFrame {
             }
         });
 
+        mAthletesButton.setText("My Athletes");
+        mAthletesButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mAthletesButtonActionPerformed(evt);
+            }
+        });
+
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -77,7 +85,8 @@ public class CoachViewForm extends javax.swing.JFrame {
                         .add(82, 82, 82)
                         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                             .add(viewPendingButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .add(modifyDataButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .add(modifyDataButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .add(mAthletesButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(166, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -85,7 +94,9 @@ public class CoachViewForm extends javax.swing.JFrame {
             .add(layout.createSequentialGroup()
                 .addContainerGap()
                 .add(homeButton)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 153, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 113, Short.MAX_VALUE)
+                .add(mAthletesButton)
+                .add(18, 18, 18)
                 .add(modifyDataButton)
                 .add(18, 18, 18)
                 .add(viewPendingButton)
@@ -109,6 +120,12 @@ public class CoachViewForm extends javax.swing.JFrame {
         var newGui = new ModifyCNForm(this.model, this.coach);
         newGui.setVisible(true);
     }//GEN-LAST:event_modifyDataButtonActionPerformed
+
+    private void mAthletesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mAthletesButtonActionPerformed
+        var newGui = new CoachAthletesForm(this.model, this.coach);
+        newGui.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mAthletesButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -147,6 +164,7 @@ public class CoachViewForm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton homeButton;
+    private javax.swing.JButton mAthletesButton;
     private javax.swing.JButton modifyDataButton;
     private javax.swing.JButton viewPendingButton;
     // End of variables declaration//GEN-END:variables

@@ -10,5 +10,23 @@ package model;
  * @author borek
  */
 public class Food {
+    private String name;
+    private int weightGrams;
+    private String recipe;
     
+    public Food(String n, int w, String r){
+        this.name = n;
+        this.weightGrams = w;
+        this.recipe = r;
+    }
+    
+    public String getName(){
+        return this.name;
+    }
+    public int getWeightGrams(){
+        return this.weightGrams;
+    }
+    public String getRecipe(){
+        return this.recipe;
+    }
 }

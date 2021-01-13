@@ -54,4 +54,12 @@ public abstract class SportAdvisor extends User {
     public void AddAthleteToGroup(Athlete athlete){
         this.groupAthletes.add(athlete);
     }
+    public String[] ViewGroupAthletesNames(){
+        int numberAthletes = this.groupAthletes.size();
+        String[] athletesNames = new String[numberAthletes];
+        for (int i=0; i<numberAthletes; i++){
+            athletesNames[i] = this.groupAthletes.get(i).getName();
+        }
+        return athletesNames;
+    }
 }

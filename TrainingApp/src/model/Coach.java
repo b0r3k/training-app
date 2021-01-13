@@ -12,6 +12,7 @@ import java.util.ArrayList;
  * @author borek
  */
 public class Coach extends SportAdvisor {
+    private ArrayList<Exercise> myExercises;
     
     public Coach(String name, String password, String email, String expertise){
         this.setName(name);
@@ -20,18 +21,23 @@ public class Coach extends SportAdvisor {
         this.setExpertise(expertise);
         this.groupAthletes = new ArrayList<>();
         this.pendingRequests = new ArrayList<>();
-    }
-   
-    
-    public void AcceptAthlete(){
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.myExercises = new ArrayList<>();
     }
     
-    public void RemoveAthlete(){
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void AddExerciseToMyExercises(Exercise exercise){
+        this.myExercises.add(exercise);
     }
     
-    public void CreateTrainig(){
-        throw new UnsupportedOperationException("Not supported yet.");
+    public String[] ViewExercises(){
+        int numberExercises = this.myExercises.size();
+        String[] viewExercises = new String[numberExercises];
+        for (int i=0; i<numberExercises; i++){
+            Exercise ex = myExercises.get(i);
+            String exName = ex.getName();
+            String exLength = Integer.toString(ex.getLength());
+            String exBasedOn = ex.getBasedOn().toString();
+            viewExercises[i] = exName + ", " + exLength + " " + exBasedOn;
+        }
+        return viewExercises;
     }
 }

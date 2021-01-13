@@ -36,7 +36,6 @@ public class App {
         return this.allUsers;
     }
     
-    //public ArrayList<User> ViewUsers(){
     public String[] ViewUsersNames(){
         int numberUsers = this.allUsers.size();
         String[] usersNames = new String[numberUsers];
