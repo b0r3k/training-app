@@ -53,7 +53,14 @@ public abstract class SportAdvisor extends User {
     
     public void AddAthleteToGroup(Athlete athlete){
         this.groupAthletes.add(athlete);
+        if(this instanceof Coach){
+            athlete.setHasCoach(true);
+        }
+        else if (this instanceof Nutritionist){
+            athlete.setHasNutritionist(true);
+        }
     }
+    
     public String[] ViewGroupAthletesNames(){
         int numberAthletes = this.groupAthletes.size();
         String[] athletesNames = new String[numberAthletes];
@@ -61,5 +68,17 @@ public abstract class SportAdvisor extends User {
             athletesNames[i] = this.groupAthletes.get(i).getName();
         }
         return athletesNames;
+    }
+    public void RemoveAthleteFromIndex(int index){
+        if (0 <= index && index < this.groupAthletes.size()){
+            Athlete athlete = this.groupAthletes.get(index);
+            this.groupAthletes.remove(index);
+            if(this instanceof Coach){
+                athlete.setHasCoach(false);
+            }
+            else if (this instanceof Nutritionist){
+                athlete.setHasNutritionist(false);
+            }
+        }
     }
 }

@@ -7,6 +7,7 @@
 package gui;
 
 import model.*;
+import javax.swing.JOptionPane;
 /**
  *
  * @author borek
@@ -40,6 +41,7 @@ public class CoachAthletesForm extends javax.swing.JFrame {
         backButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         athletesList = new javax.swing.JList<>();
+        removeButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,19 +54,25 @@ public class CoachAthletesForm extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(athletesList);
 
+        removeButton.setText("Remove From Group");
+        removeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeButtonActionPerformed(evt);
+            }
+        });
+
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
                 .addContainerGap()
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(layout.createSequentialGroup()
-                        .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 126, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .add(layout.createSequentialGroup()
-                        .add(backButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE)
-                        .add(166, 166, 166))))
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                    .add(backButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE))
+                .add(18, 18, 18)
+                .add(removeButton)
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -72,8 +80,10 @@ public class CoachAthletesForm extends javax.swing.JFrame {
                 .addContainerGap()
                 .add(backButton)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(130, Short.MAX_VALUE))
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                    .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 246, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(removeButton))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         pack();
@@ -81,7 +91,21 @@ public class CoachAthletesForm extends javax.swing.JFrame {
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         this.setVisible(false);
+        var newGui = new CoachViewForm(this.model, this.coach);
+        newGui.setVisible(true);
     }//GEN-LAST:event_backButtonActionPerformed
+
+    private void removeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeButtonActionPerformed
+        if(this.athletesList.isSelectionEmpty()){
+            JOptionPane.showMessageDialog(this, "Select an athlete!");
+        }
+        else{
+            int athleteIndex = this.athletesList.getSelectedIndex();
+            this.coach.RemoveAthleteFromIndex(athleteIndex);
+            this.athletesList.setListData(this.coach.ViewGroupAthletesNames());
+            JOptionPane.showMessageDialog(this, "Athlete removed!");
+        }
+    }//GEN-LAST:event_removeButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -122,6 +146,7 @@ public class CoachAthletesForm extends javax.swing.JFrame {
     private javax.swing.JList<String> athletesList;
     private javax.swing.JButton backButton;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton removeButton;
     // End of variables declaration//GEN-END:variables
 
 }
