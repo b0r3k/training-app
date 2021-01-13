@@ -21,6 +21,8 @@ public class Athlete extends User {
     private String limitations;
     private ArrayList<SportDay> sportPlan;
     private ArrayList<SportDay> oldSportPlan;
+    private Boolean hasCoach;
+    private Boolean hasNutritionist;
     
     public Athlete(String name, String password, String email, int w, int h, int bYear, String l){
         if (w < 30 || w > 220 || h < 120 || h > 230 || bYear < 1900 || bYear > LocalDate.now().getYear()){
@@ -38,6 +40,8 @@ public class Athlete extends User {
             this.limitations = l;
             this.sportPlan = new ArrayList<>();
             this.oldSportPlan = new ArrayList<>();
+            this.hasCoach = false;
+            this.hasNutritionist = false;
         }        
     }
     
@@ -55,6 +59,18 @@ public class Athlete extends User {
     }
     public String getLimitations(){
         return this.limitations;
+    }
+    public Boolean getHasCoach(){
+        return this.hasCoach;
+    }
+    public void setHasCoach(Boolean h){
+        this.hasCoach = h;
+    }
+    public Boolean getHasNutritionist(){
+        return this.hasNutritionist;
+    }
+    public void setHasNutritionist(Boolean h){
+        this.hasNutritionist = h;
     }
     
     public void ModifyOwnData(int w, int h, String l){

@@ -142,13 +142,23 @@ public class AthleteViewForm extends javax.swing.JFrame {
     }//GEN-LAST:event_homeButtonActionPerformed
 
     private void findNutritionistButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_findNutritionistButtonActionPerformed
-        var newGui = new FindingNutrForm(this.model, this.athlete);
-        newGui.setVisible(true);
+        if(this.athlete.getHasNutritionist()){
+            JOptionPane.showMessageDialog(this, "You already have a Nutritionist!");
+        }
+        else{
+            var newGui = new FindingNutrForm(this.model, this.athlete);
+            newGui.setVisible(true);
+        }
     }//GEN-LAST:event_findNutritionistButtonActionPerformed
 
     private void findCoachButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_findCoachButtonActionPerformed
-        var newGui = new FindingCoachForm(this.model, this.athlete);
-        newGui.setVisible(true);
+        if(this.athlete.getHasCoach()){
+            JOptionPane.showMessageDialog(this, "You already have a Coach!");
+        }
+        else{
+            var newGui = new FindingCoachForm(this.model, this.athlete);
+            newGui.setVisible(true);
+        }
     }//GEN-LAST:event_findCoachButtonActionPerformed
 
     private void modifyDataButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modifyDataButtonActionPerformed

@@ -122,6 +122,15 @@ public class PendingRequestsForm extends javax.swing.JFrame {
             if (acceptRadioButton.isSelected()){    
                 Athlete athleteAsking = selectedRequest.getAthleteAsking();
                 this.sportAdvisor.AddAthleteToGroup(athleteAsking);
+                if(this.sportAdvisor instanceof Coach){
+                    athleteAsking.setHasCoach(true);
+                }
+                else if (this.sportAdvisor instanceof Nutritionist){
+                    athleteAsking.setHasNutritionist(true);
+                }
+                else{
+                    JOptionPane.showMessageDialog(this, "Unknown error, this should not happen!");
+                }
                 this.sportAdvisor.RemoveRequestFromIndex(requestIndex);
                 this.requestsList.setListData(this.sportAdvisor.ViewRequestsAthletesInfos());
                 JOptionPane.showMessageDialog(this, "Athlete added to your group!");
