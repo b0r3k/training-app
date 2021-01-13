@@ -47,8 +47,6 @@ public class PendingRequestsForm extends javax.swing.JFrame {
         acceptRadioButton = new javax.swing.JRadioButton();
         declineRadioButton = new javax.swing.JRadioButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         jScrollPane1.setViewportView(requestsList);
 
         confirmButton.setText("Confirm!");
@@ -121,7 +119,7 @@ public class PendingRequestsForm extends javax.swing.JFrame {
         else{
             int requestIndex = this.requestsList.getSelectedIndex();
             AvailabilityRequest selectedRequest = this.sportAdvisor.getPendingRequests().get(requestIndex);
-            if (acceptRadioButton.isSelected()){
+            if (acceptRadioButton.isSelected()){    
                 Athlete athleteAsking = selectedRequest.getAthleteAsking();
                 this.sportAdvisor.AddAthleteToGroup(athleteAsking);
                 this.sportAdvisor.RemoveRequestFromIndex(requestIndex);

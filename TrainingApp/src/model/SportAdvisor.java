@@ -27,7 +27,7 @@ public abstract class SportAdvisor extends User {
         return this.pendingRequests;
     }
     
-    protected void ModifyOwnData(String e){
+    public void ModifyOwnData(String e){
         this.setExpertise(e);
     }
     

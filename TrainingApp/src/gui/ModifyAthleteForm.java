@@ -51,8 +51,6 @@ public class ModifyAthleteForm extends javax.swing.JFrame {
         limitationsLabel = new javax.swing.JLabel();
         saveButton = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         backButton.setText("Back");
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

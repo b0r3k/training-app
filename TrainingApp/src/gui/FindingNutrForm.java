@@ -45,8 +45,6 @@ public class FindingNutrForm extends javax.swing.JFrame {
         nutrsList = new javax.swing.JList<>();
         submitButton = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         backButton.setText("Back");
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -45,8 +45,6 @@ public class FindingCoachForm extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         chooseTextArea = new javax.swing.JTextArea();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         backButton.setText("Back");
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

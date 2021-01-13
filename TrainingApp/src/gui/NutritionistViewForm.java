@@ -39,6 +39,7 @@ public class NutritionistViewForm extends javax.swing.JFrame {
 
         homeButton = new javax.swing.JButton();
         viewPendingButton = new javax.swing.JButton();
+        modifyDataButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -56,6 +57,13 @@ public class NutritionistViewForm extends javax.swing.JFrame {
             }
         });
 
+        modifyDataButton.setText("Modify My Data");
+        modifyDataButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modifyDataButtonActionPerformed(evt);
+            }
+        });
+
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -67,7 +75,9 @@ public class NutritionistViewForm extends javax.swing.JFrame {
                         .add(homeButton))
                     .add(layout.createSequentialGroup()
                         .add(86, 86, 86)
-                        .add(viewPendingButton)))
+                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(modifyDataButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .add(viewPendingButton))))
                 .addContainerGap(162, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -75,7 +85,9 @@ public class NutritionistViewForm extends javax.swing.JFrame {
             .add(layout.createSequentialGroup()
                 .addContainerGap()
                 .add(homeButton)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 150, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 110, Short.MAX_VALUE)
+                .add(modifyDataButton)
+                .add(18, 18, 18)
                 .add(viewPendingButton)
                 .add(100, 100, 100))
         );
@@ -92,6 +104,11 @@ public class NutritionistViewForm extends javax.swing.JFrame {
         var newGui = new PendingRequestsForm(this.model, this.nutritionist);
         newGui.setVisible(true);
     }//GEN-LAST:event_viewPendingButtonActionPerformed
+
+    private void modifyDataButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modifyDataButtonActionPerformed
+        var newGui = new ModifyCNForm(this.model, this.nutritionist);
+        newGui.setVisible(true);
+    }//GEN-LAST:event_modifyDataButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -130,6 +147,7 @@ public class NutritionistViewForm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton homeButton;
+    private javax.swing.JButton modifyDataButton;
     private javax.swing.JButton viewPendingButton;
     // End of variables declaration//GEN-END:variables
 
