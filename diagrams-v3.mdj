@@ -7285,9 +7285,9 @@
 										"$ref": "AAAAAAF2/UHEz4osrLU="
 									},
 									"font": "Arial;13;0",
-									"left": 183,
+									"left": 182,
 									"top": 1117,
-									"width": 5.05908203125,
+									"width": 6.5,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 25,
@@ -7556,9 +7556,9 @@
 										"$ref": "AAAAAAF2/UPIGJBWwmc="
 									},
 									"font": "Arial;13;0",
-									"left": 879,
+									"left": 878,
 									"top": 1259,
-									"width": 5.05908203125,
+									"width": 6.5,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 25,
@@ -7827,9 +7827,9 @@
 										"$ref": "AAAAAAF2/UTuZZLX43o="
 									},
 									"font": "Arial;13;0",
-									"left": 1742,
+									"left": 1741,
 									"top": 1134,
-									"width": 5.05908203125,
+									"width": 6.5,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 25,
@@ -8962,9 +8962,9 @@
 											"font": "Arial;13;3",
 											"left": 1053,
 											"top": 365,
-											"width": 89.57177734375,
+											"width": 93.18359375,
 											"height": 13,
-											"text": "SportsAdvisor"
+											"text": "Sports Advisor"
 										},
 										{
 											"_type": "LabelView",
@@ -8997,7 +8997,7 @@
 									"font": "Arial;13;0",
 									"left": 1048,
 									"top": 358,
-									"width": 99.57177734375,
+									"width": 103.18359375,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF29X27g7A2xo8="
@@ -9081,7 +9081,7 @@
 							"containerChangeable": true,
 							"left": 1048,
 							"top": 304,
-							"width": 99.57177734375,
+							"width": 103.18359375,
 							"height": 80,
 							"nameCompartment": {
 								"$ref": "AAAAAAF29X27g7A1yuU="
@@ -9183,7 +9183,7 @@
 								"$ref": "AAAAAAF29X27g7A0QuU="
 							},
 							"lineStyle": 1,
-							"points": "1097:303;1096:136;563:135",
+							"points": "1098:303;1096:136;563:135",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF29X27zrBeiBE="
@@ -9457,7 +9457,7 @@
 								"$ref": "AAAAAAF29X+YRrQ99Aw="
 							},
 							"lineStyle": 1,
-							"points": "1066:598;1096:592;1097:384",
+							"points": "1066:598;1096:592;1099:384",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF29X+YnbRnL1A="
@@ -9731,7 +9731,7 @@
 								"$ref": "AAAAAAF29X+ehrR3+uo="
 							},
 							"lineStyle": 1,
-							"points": "1082:711;1176:712;1176:344;1148:344",
+							"points": "1082:711;1176:712;1176:344;1151:344",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF29X+e2bShyLM="
@@ -10150,8 +10150,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1030,
-									"top": 391,
+									"left": 1029,
+									"top": 392,
 									"height": 13,
 									"alpha": 0.7853981633974483,
 									"distance": 40,
@@ -10172,7 +10172,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 1022,
-									"top": 350,
+									"top": 351,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 25,
@@ -10213,7 +10213,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 958,
-									"top": 417,
+									"top": 418,
 									"height": 13,
 									"alpha": -0.7853981633974483,
 									"distance": 40,
@@ -10280,7 +10280,7 @@
 								"$ref": "AAAAAAF29X27g7A0QuU="
 							},
 							"lineStyle": 1,
-							"points": "1047:361;922:407",
+							"points": "1047:362;922:407",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF29tI3ZrufAz8="
@@ -12403,7 +12403,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 1027,
-									"top": 297,
+									"top": 296,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 30,
@@ -12423,7 +12423,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 1029,
-									"top": 284,
+									"top": 283,
 									"height": 13,
 									"alpha": -0.7853981633974483,
 									"distance": 40,
@@ -12443,7 +12443,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 1022,
-									"top": 324,
+									"top": 323,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 25,
@@ -12490,7 +12490,7 @@
 								"$ref": "AAAAAAF290Mm5RXf9/4="
 							},
 							"lineStyle": 1,
-							"points": "905:277;1047:326",
+							"points": "905:277;1047:325",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF290PPkhgLyNw="
@@ -15663,7 +15663,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 943,
-									"top": 425,
+									"top": 426,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -15684,7 +15684,7 @@
 									"visible": null,
 									"font": "Arial;13;0",
 									"left": 934,
-									"top": 413,
+									"top": 414,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -15705,7 +15705,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 960,
-									"top": 450,
+									"top": 451,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -15746,7 +15746,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 863,
+									"left": 864,
 									"top": 465,
 									"height": 13,
 									"alpha": 0.7853981633974483,
@@ -15789,7 +15789,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 1017,
-									"top": 374,
+									"top": 375,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 30,
@@ -15829,7 +15829,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 1036,
-									"top": 394,
+									"top": 395,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 25,
@@ -15874,7 +15874,7 @@
 								"$ref": "AAAAAAF2/PykDgS7d0c="
 							},
 							"lineStyle": 1,
-							"points": "857:511;1047:378",
+							"points": "857:511;1047:379",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF2/XglLgwemXI="
@@ -18834,7 +18834,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "SportsAdvisor",
+					"name": "Sports Advisor",
 					"ownedElements": [
 						{
 							"_type": "UMLGeneralization",
