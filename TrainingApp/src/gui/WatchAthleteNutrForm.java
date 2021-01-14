@@ -325,6 +325,7 @@ public class WatchAthleteNutrForm extends javax.swing.JFrame {
             
             SportDay s = new SportDay(day, month, year);
             this.a.AddSportDay(s);
+            this.a.OrderPlans();
             this.sportDayList.setListData(a.ViewSportPlan());
             
         }

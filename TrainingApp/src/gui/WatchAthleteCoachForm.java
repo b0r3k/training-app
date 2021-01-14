@@ -372,7 +372,7 @@ public class WatchAthleteCoachForm extends javax.swing.JFrame {
             SportDay s = new SportDay(day, month, year);
             // creates sport day
             this.a.AddSportDay(s);
-            
+            this.a.OrderPlans();
             // adds Sport day to athlete
             this.sportDayList.setListData(a.ViewSportPlan());
             // refreshes sport day

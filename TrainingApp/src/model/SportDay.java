@@ -112,7 +112,7 @@ public class SportDay implements Comparable<SportDay>{
       @Override
       public int compareTo(SportDay other){
           return this.getDate().compareTo(other.getDate());
-          
+        
               
               
           

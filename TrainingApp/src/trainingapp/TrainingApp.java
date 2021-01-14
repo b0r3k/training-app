@@ -19,6 +19,11 @@ public class TrainingApp {
     public static void main(String[] args) {
         App app = new App();
         
+        EntryForm gui = new EntryForm(app);
+        gui.setVisible(true);
+        
+        /*
+        TEST DATA
         Athlete a = new Athlete("Emil", "pass", "emil@emil.cz", 40, 160, 1994, "Can't walk.");
         app.AddAthlete(a);
         Athlete a2 = new Athlete("Karel", "pass", "karel@karel.cz", 80, 180, 2002, "No.");
@@ -38,8 +43,6 @@ public class TrainingApp {
         s2.AddExcer(e1);
         s2.AddExcer(e2);
         s3.AddExcer(e3);
-                
-               
         
         Food f1 = new Food("manza", 2, "lkjsdfsdf");
         Food f2 = new Food("manzann", 2, "lkjsdfsdf");
@@ -64,9 +67,7 @@ public class TrainingApp {
         n.AddAthleteToGroup(a);
         n.AddAthleteToGroup(a2);
         app.AddNutritionist(n);
-        
-        EntryForm gui = new EntryForm(app);
-        gui.setVisible(true);
+        */
     }
     
     public static void GoHome(App m){
