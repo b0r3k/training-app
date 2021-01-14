@@ -15,8 +15,8 @@ import java.util.ArrayList;
 public class Athlete extends User {
     private int weight;         // kilograms
     private int height;         // centimetres
-    private int bmi;
-    private int age;            // now().getYear() - birthday.getYear()
+    private float bmi;
+    private int age;            // years
     private int birthday;
     private String limitations;
     private ArrayList<SportDay> sportPlan;
@@ -34,7 +34,7 @@ public class Athlete extends User {
             this.setEmail(email);
             this.weight = w;
             this.height = h;
-            this.bmi = w / ((h/100)*(h/100));
+            this.bmi = (float)w / (((float)h/100)*((float)h/100));
             this.birthday = bYear;
             this.age = LocalDate.now().getYear() - birthday;
             this.limitations = l;
@@ -51,7 +51,7 @@ public class Athlete extends User {
     public int getHeight(){
         return this.height;
     }
-    public int getBmi(){
+    public float getBmi(){
         return this.bmi;
     }
     public int getAge(){
@@ -73,6 +73,10 @@ public class Athlete extends User {
         this.hasNutritionist = h;
     }
     
+    public void AddSportDay(SportDay s){
+        this.sportPlan.add(s);
+    
+    }
     public void ModifyOwnData(int w, int h, String l){
         if (w < 30 || w > 220 || h < 120 || h > 230){
             // TODO EXCEPTION
@@ -81,14 +85,46 @@ public class Athlete extends User {
             this.weight = w;
             this.height = h;
             this.limitations = l;
+            this.bmi = (float)w / (((float)h/100)*((float)h/100));
         }
     }
     
-    public ArrayList<SportDay> ViewSportPlan(){
+    
+    public ArrayList<SportDay> getSportPlan(){
         return this.sportPlan;
     }
-    
-    public ArrayList<SportDay> ViewOldSportPlan(){
+    public ArrayList<SportDay> getOldSportPlan(){
         return this.oldSportPlan;
     }
+    
+    public void OrderPlans(){
+        this.sportPlan.sort((elemento1, elemento2)->elemento1.compareTo(elemento2));
+        this.oldSportPlan.sort((elemento1, elemento2)->elemento1.compareTo(elemento2));
+        for(int i = 0; i< this.sportPlan.size(); i++){
+            if (this.sportPlan.get(i).getDate().compareTo(LocalDate.now()) < 0){
+                SportDay s = this.sportPlan.get(i);
+                this.sportPlan.remove(s);
+                this.oldSportPlan.add(s);
+                
+            
+            }
+        }
+    }
+    public String[] ViewOldSportPlan(){
+        String[] dates = new String[this.oldSportPlan.size()];
+        for (int i = 0; i < this.oldSportPlan.size(); i++){
+            dates[i] = this.oldSportPlan.get(i).getDate().toString();
+        }
+        return dates;
+    }
+    
+    public String[] ViewSportPlan(){
+        String[] dates = new String[this.sportPlan.size()];
+        for (int i = 0; i < this.sportPlan.size(); i++){
+            dates[i] = this.sportPlan.get(i).getDate().toString();
+        }
+        return dates;
+        
+    }
+   
 }

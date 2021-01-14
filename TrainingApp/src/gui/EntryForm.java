@@ -42,6 +42,7 @@ public class EntryForm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        welcomeLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         welcomeLabel.setText("Welcome to our training app!");
         welcomeLabel.setName("nameLabel"); // NOI18N
 

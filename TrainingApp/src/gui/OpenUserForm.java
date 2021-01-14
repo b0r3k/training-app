@@ -116,7 +116,9 @@ public class OpenUserForm extends javax.swing.JFrame {
             
             var newGui = new javax.swing.JFrame();
             if(selectedUser instanceof Athlete){
-                newGui = new AthleteViewForm(this.model, (Athlete)selectedUser);
+                Athlete a = (Athlete)selectedUser;
+                a.OrderPlans();
+                newGui = new AthleteViewForm(this.model, a);
             }
             else if (selectedUser instanceof Coach){
                 newGui = new CoachViewForm(this.model, (Coach)selectedUser);

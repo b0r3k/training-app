@@ -26,6 +26,10 @@ public abstract class SportAdvisor extends User {
     public ArrayList<AvailabilityRequest> getPendingRequests(){
         return this.pendingRequests;
     }
+    public ArrayList<Athlete> getGroupAthletes(){
+        return this.groupAthletes;
+    }
+    
     
     public void ModifyOwnData(String e){
         this.setExpertise(e);

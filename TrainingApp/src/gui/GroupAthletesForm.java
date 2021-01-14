@@ -121,8 +121,30 @@ public class GroupAthletesForm extends javax.swing.JFrame {
 
     private void openAthleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openAthleteButtonActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
+        if(this.athletesList.isSelectionEmpty()){
+            JOptionPane.showMessageDialog(this, "Select an Athlete!");
+        }
+        else{
+            int userIndex = this.athletesList.getSelectedIndex();
+            Athlete selectedAthlete = this.sportAdvisor.getGroupAthletes().get(userIndex);
+            selectedAthlete.OrderPlans();
+            
+            var newGui = new javax.swing.JFrame();
+            if(this.sportAdvisor instanceof Coach){
+                newGui = new WatchAthleteCoachForm(this.model, (Coach)this.sportAdvisor, selectedAthlete);
+            }
+            else if(this.sportAdvisor instanceof Nutritionist){
+                newGui = new WatchAthleteNutrForm(this.model, (Nutritionist)this.sportAdvisor,selectedAthlete );
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "Unknown error, this should not happen!");
+            }
+            newGui.setVisible(true);
+        }
     }//GEN-LAST:event_openAthleteButtonActionPerformed
-
+    
+    
     private void removeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeButtonActionPerformed
         if(this.athletesList.isSelectionEmpty()){
             JOptionPane.showMessageDialog(this, "Select an athlete!");
@@ -134,7 +156,7 @@ public class GroupAthletesForm extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Athlete removed!");
         }
     }//GEN-LAST:event_removeButtonActionPerformed
-
+    
     /**
      * @param args the command line arguments
      */

@@ -54,6 +54,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="welcomeLabel">
       <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="Welcome to our training app!"/>
         <Property name="name" type="java.lang.String" value="nameLabel" noResource="true"/>
       </Properties>

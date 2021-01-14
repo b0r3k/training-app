@@ -24,10 +24,13 @@ public class Coach extends SportAdvisor {
         this.myExercises = new ArrayList<>();
     }
     
-    public void AddExerciseToMyExercises(Exercise exercise){
+    public void AddExercise(Exercise exercise){
         this.myExercises.add(exercise);
     }
     
+    public  ArrayList<Exercise> getMyExercises(){
+        return this.myExercises;
+    }
     public String[] ViewExercises(){
         int numberExercises = this.myExercises.size();
         String[] viewExercises = new String[numberExercises];

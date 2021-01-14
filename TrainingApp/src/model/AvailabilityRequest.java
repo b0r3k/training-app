@@ -25,7 +25,7 @@ public class AvailabilityRequest {
         String name = athlete.getName();
         String weight = Integer.toString(athlete.getWeight());
         String height = Integer.toString(athlete.getHeight());
-        String bmi = Integer.toString(athlete.getBmi());
+        String bmi = String.format("%.2f", athlete.getBmi());
         String age = Integer.toString(athlete.getAge());
         String limitations = athlete.getLimitations();
         return (name+", "+weight+" kg, "+height+" cm, BMI: "+bmi+", "+age+" yrs, Limitations:"+limitations);

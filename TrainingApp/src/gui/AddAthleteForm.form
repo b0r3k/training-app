@@ -170,6 +170,9 @@
     <Component class="javax.swing.JTextField" name="birthdayTextField">
     </Component>
     <Component class="javax.swing.JTextField" name="nameTextField">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nameTextFieldActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="addAthleteButton">
       <Properties>

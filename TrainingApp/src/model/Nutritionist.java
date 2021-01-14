@@ -24,7 +24,24 @@ public class Nutritionist extends SportAdvisor {
         this.myFoods = new ArrayList<>();
     }
     
-    public void AddFoodToMyFoods(Food food){
+    
+    public  ArrayList<Food> getMyFoods(){
+        return this.myFoods;
+    }
+    public String[] ViewFoods(){
+        int numberFoods = this.myFoods.size();
+        String[] viewFoods = new String[numberFoods];
+        for (int i=0; i<numberFoods; i++){
+            Food f = myFoods.get(i);
+            String FoodName = f.getName();
+            String FoodWeight = Integer.toString(f.getWeightGrams());
+            
+            viewFoods[i] = FoodName + ", " + FoodWeight + "[" + f.getRecipe()+ "]";
+        }
+        return viewFoods;
+    }
+    
+    public void AddFood(Food food){
         this.myFoods.add(food);
     }
 }

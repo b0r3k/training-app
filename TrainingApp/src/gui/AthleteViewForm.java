@@ -76,8 +76,18 @@ public class AthleteViewForm extends javax.swing.JFrame {
         });
 
         viewPlanButton.setText("View Sports Plan");
+        viewPlanButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewPlanButtonActionPerformed(evt);
+            }
+        });
 
         viewOldPlanButton.setText("View Old Sports Plan");
+        viewOldPlanButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewOldPlanButtonActionPerformed(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -148,6 +158,18 @@ public class AthleteViewForm extends javax.swing.JFrame {
         var newGui = new ModifyAthleteForm(this.model, this.athlete);
         newGui.setVisible(true);
     }//GEN-LAST:event_modifyDataButtonActionPerformed
+
+    private void viewPlanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewPlanButtonActionPerformed
+        // TODO add your handling code here:
+        var newGui = new ViewSportsPlanForm(this.model, this.athlete);
+        newGui.setVisible(true);
+    }//GEN-LAST:event_viewPlanButtonActionPerformed
+
+    private void viewOldPlanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewOldPlanButtonActionPerformed
+        // TODO add your handling code here:
+        var newGui = new ViewOldSportsPlan(this.model, this.athlete);
+        newGui.setVisible(true);
+    }//GEN-LAST:event_viewOldPlanButtonActionPerformed
 
     /**
      * @param args the command line arguments

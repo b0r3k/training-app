@@ -80,6 +80,12 @@ public class AddAthleteForm extends javax.swing.JFrame {
 
         birthdayLabel.setText("Birthday:");
 
+        nameTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nameTextFieldActionPerformed(evt);
+            }
+        });
+
         addAthleteButton.setText("Add Athlete!");
         addAthleteButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -221,6 +227,10 @@ public class AddAthleteForm extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_addAthleteButtonActionPerformed
+
+    private void nameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nameTextFieldActionPerformed
 
     /**
      * @param args the command line arguments
